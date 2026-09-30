@@ -15,3 +15,25 @@
 @media(max-width:800px) { .header-inner { min-height:74px; gap:15px; flex-wrap:wrap; } nav { gap:20px; } nav a { padding:26px 0; } .concept-badge { display:none; } .intro { grid-template-columns:1fr; padding-top:33px; padding-bottom:30px; gap:25px; } .intro-aside { display:none; } .product-grid,.bundle-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } .section-meta { font-size:.75rem; } .section-heading { align-items:center; } .approach-section { gap:35px; grid-template-columns:1fr 1.4fr; padding-top:40px; margin-top:40px; } .footer-inner { flex-wrap:wrap; } .footer-inner p { order:3; width:100%; } }
 @media(max-width:540px) { .shell { padding-left:20px; padding-right:20px; } .header-inner { justify-content:center; gap:0; padding-top:19px; } .brand { font-size:1.5rem; } .header-inner nav { width:100%; justify-content:center; gap:28px; font-size:.875rem; } nav a { padding:20px 0 15px; } h1 { font-size:2.1875rem; letter-spacing:-1.15px; } .intro { padding-top:32px; } .desktop-break { display:none; } h2 { font-size:1.5625rem; } .section-heading { align-items:flex-start; flex-direction:column; gap:10px; } .filter-list { gap:7px; } .filter { padding:11px 9px; gap:6px; } .filter-count { margin-left:0; } .filter svg { width:15px; } .catalog-status { flex-direction:column; gap:8px; margin-top:17px; } .product-grid,.bundle-grid { grid-template-columns:1fr; gap:18px; } .product-cover { padding:19px 23px; } .cover-top { margin-bottom:20px; } .product-body { padding:21px 23px; } .product-description { margin-bottom:20px; } .product-action { flex-wrap:nowrap; } .preview-btn,.bundle-btn { padding:10px 15px; } .bundle-section { padding-top:44px; } .bundle-card { padding:24px; } .approach-section { grid-template-columns:1fr; gap:27px; padding-bottom:40px; } .approach-intro h2 { font-size:1.875rem; } .compare-dock { gap:10px; padding:13px; bottom:12px; max-width:calc(100% - 20px); flex-wrap:wrap; justify-content:center; } .dock-title>svg { display:none; } .dock-title span { display:none; } .clear-btn { padding:4px; } .compare-btn { padding:10px; } .tool-dialog,.compare-dialog { padding:25px 20px!important; } .modal-title { font-size:1.5625rem!important; } .detail-summary { grid-template-columns:1fr 1fr; } .detail-summary>div:first-child { grid-column:1/-1; } .contents-list { grid-template-columns:1fr; } .sample-header span:last-child { margin-left:0; width:100%; } .sample-row { grid-template-columns:95px 1fr; padding:11px 13px; gap:9px; } .comparison-table { min-width:700px; } }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*::before,*::after { animation:none!important; transition:none!important; } }
+
+/* Keep comparison controls reachable without covering the end of the page. */
+body { padding-bottom:var(--compare-space, 0px); }
+html { scroll-padding-bottom:var(--compare-space, 24px); }
+.compare-dock { width:min(1080px, calc(100% - 32px)); flex-wrap:wrap; }
+.dock-title { flex:1; white-space:normal; }
+.dock-chips { display:flex; flex-wrap:wrap; }
+.dock-chips button { min-height:44px; }
+.comparison-remove { min-width:28px; min-height:28px; }
+.card-compare:has(button:disabled) label { cursor:not-allowed; opacity:.65; }
+@media(max-width:1100px) {
+  .dock-chips { order:4; width:100%; }
+  .dock-chips button { flex:1; max-width:none; min-width:0; }
+}
+@media(max-width:540px) {
+  .compare-dock { width:calc(100% - 20px); }
+  .dock-title { flex-basis:100%; }
+  .dock-title span { display:block; }
+  .clear-btn { min-height:44px; }
+  .compare-btn { flex:1; min-height:44px; }
+  .dock-chips button { padding:6px; gap:4px; }
+}
