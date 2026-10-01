@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Workstack | Security, AI & business tools",
-  description: "Explore a concept catalog of cybersecurity, AI safety and governance, business risk, and workflow tools. Compare proposed toolkits and preview bundles.",
+  title: "Workstack | Cybersecurity, AI & business toolkits",
+  description: "Explore practical cybersecurity, AI governance, and workflow toolkits designed to simplify complex work.",
   robots: { index: false, follow: false },
   icons: {
     icon: "/favicon.svg",
