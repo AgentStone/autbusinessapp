@@ -21,6 +21,8 @@
 # misc
 .DS_Store
 *.pem
+# Microsoft Office temporary owner/lock files (for example, ~$workbook.xlsx)
+~$*
 
 # debug
 npm-debug.log*
