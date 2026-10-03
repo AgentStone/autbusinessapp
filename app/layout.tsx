@@ -2,12 +2,12 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Workstack | Cybersecurity, AI & business toolkits",
+  title: "CAB Synergy | Cybersecurity, AI & business toolkits",
   description: "Explore practical cybersecurity, AI governance, and workflow toolkits designed to simplify complex work.",
   robots: { index: false, follow: false },
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/images/cab-synergy-icon.png",
+    shortcut: "/images/cab-synergy-icon.png",
   },
 };
 

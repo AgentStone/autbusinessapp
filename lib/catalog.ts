@@ -17,5 +17,5 @@ export const bundles: Bundle[] = [
   { id: "responsible-ai", niche: "ai", name: "Responsible AI Bundle", description: "Pair a practical pilot plan with ownership, oversight, and risk review.", price: 139, products: ["ai-pilot", "ai-governance"] },
   { id: "business-ops", niche: "business", name: "Business Systems Bundle", description: "Pair repeatable processes with a regular operating review.", price: 89, products: ["sop", "business-review"] },
   { id: "workflow", niche: "plugins", name: "Workflow Extensions Bundle", description: "Explore two specialized plugin concepts for structured team handoffs.", price: 59, products: ["issue-plugin", "handoff-plugin"] },
-  { id: "complete", niche: "all", name: "The Workstack Collection", description: "Security, AI safety, business operations, and workflow tools in one proposed library.", price: 399, products: products.map(p => p.id) }
+  { id: "complete", niche: "all", name: "The CAB Synergy Collection", description: "Security, AI safety, business operations, and workflow tools in one proposed library.", price: 399, products: products.map(p => p.id) }
 ];
